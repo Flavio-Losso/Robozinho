@@ -24,7 +24,7 @@
             Console.WriteLine("De o comando para o robo: ");
             
             String comandoRobo1 = Console.ReadLine();
-            if(comandoRobo1 == "Frente")
+            /*if(comandoRobo1 == "Frente")
             {
                 String aux = matriz[robo1X, robo1y];
                 matriz[robo1X, robo1y] = null;
@@ -33,10 +33,12 @@
             }
             Console.WriteLine($"{robo1X} {robo1y} {matriz[robo1X, robo1y]} Estou aqui capitão");
             Console.WriteLine();
-
-            /*for (int i = 0; i < comandoRobo1.Length; i++)
+            */
+            x1 = robo1X;
+            y1 = robo1y;
+            for (int i = 0; i < comandoRobo1.Length; i++)
             {
-
+                matriz[robo1X, robo1y] = null;
                 if (comandoRobo1[i].Equals("D"))
                 {
                     switch (direcRobo1)
@@ -69,7 +71,9 @@
                 }
 
             }
-            Console.WriteLine($"{x1} {y1} {direcRobo1}");*/
+            matriz[x1, y1] = direcRobo1;
+            Console.WriteLine($"{x1} {y1} {matriz[x1,y1]}");
+            Console.WriteLine();
 
         }
     }
